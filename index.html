@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Last Seen: 23:41</title>
+  <link rel="stylesheet" href="css/os.css">
+</head>
+
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+
+      <div class="bg"></div>
+      <div class="vignette"></div>
+
+      <!-- LOCK SCREEN -->
+      <div class="screen active" id="screenLock">
+        <div class="lock">
+          <div class="lock-time" id="lockTime">00:00</div>
+          <div class="lock-date" id="lockDate">Loading…</div>
+          <div class="lock-notifs" id="lockNotifs"></div>
+          <div class="lock-hint">Tap notification to open</div>
+        </div>
+      </div>
+
+      <!-- MESSAGES APP -->
+      <div class="screen" id="screenMessages">
+        <div class="messages">
+
+          <div class="msg-header">
+            <div class="contact">
+              <div class="name">Unknown</div>
+              <div class="status" id="statusText">typing…</div>
+            </div>
+          </div>
+
+          <div class="msg-thread" id="thread"></div>
+
+          <div class="msg-input">
+            <input id="msgInput" placeholder="Message">
+            <button id="sendBtn">Send</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/os.js"></script>
+</body>
+</html>
