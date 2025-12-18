@@ -1,0 +1,174 @@
+/* HARD MOBILE LOCK */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+input {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* STAGE */
+.stage {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.phone {
+  width: min(420px, 95vw);
+  aspect-ratio: 9 / 19.5;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+/* BACKGROUND */
+.bg {
+  position: absolute;
+  inset: 0;
+  background: url("../assets/phone-off.png") center / cover no-repeat;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 60%, rgba(0,0,0,.8));
+}
+
+/* SCREENS */
+.screen {
+  position: absolute;
+  inset: 0;
+  display: none;
+  color: #fff;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* LOCK SCREEN */
+.lock {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.lock-time {
+  font-size: 56px;
+  font-weight: 500;
+}
+
+.lock-date {
+  opacity: .6;
+  margin-bottom: 20px;
+}
+
+.lock-notifs {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.notification {
+  background: rgba(0,0,0,.6);
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.lock-hint {
+  position: absolute;
+  bottom: 30px;
+  opacity: .5;
+  font-size: 12px;
+}
+
+/* MESSAGES APP */
+.messages {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: rgba(0,0,0,.35);
+}
+
+/* HEADER */
+.msg-header {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.name {
+  font-size: 14px;
+}
+
+.status {
+  font-size: 11px;
+  opacity: .6;
+}
+
+/* THREAD */
+.msg-thread {
+  padding: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BUBBLES */
+.bubble {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.6);
+  font-size: 13px;
+}
+
+.bubble.me {
+  align-self: flex-end;
+  opacity: .85;
+}
+
+.meta {
+  font-size: 10px;
+  opacity: .4;
+  margin-top: 4px;
+}
+
+/* INPUT */
+.msg-input {
+  display: flex;
+  padding: 10px;
+  gap: 8px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.msg-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.msg-input button {
+  background: rgba(255,255,255,.1);
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 10px;
+}
